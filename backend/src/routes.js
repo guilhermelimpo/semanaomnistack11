@@ -7,14 +7,14 @@ const OngController = require('./controllers/OngController');
 const IncidentController = require('./controllers/IncidentController');
 const ProfileController = require('./controllers/ProfileController');
 
-routes.get('/sessions', SessionController.create);
+routes.post('/sessions', SessionController.create);
 
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create);
 
 routes.get('/incidents', IncidentController.index);
 routes.post('/incidents', IncidentController.create);
-routes.delete('/incidents', IncidentController.delete );
+routes.delete('/incidents/:id', IncidentController.delete );
 
 routes.get('/profile', ProfileController.index);
 
